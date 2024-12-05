@@ -20,10 +20,3 @@ A Flask-based Todo List Management System that provides user authentication and 
 
 1. Install dependencies: `pip install -r requirements.txt`
 2. Run the application: `python run.py`
-3. Access: `http://localhost:5000`
-
-## Important Notes
-
-- Change secret keys in production environment
-- Use HTTPS in production
-- Regular data backup recommended
