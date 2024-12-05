@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项列表</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>待办事项列表</h1>
+            <button id="logoutBtn">退出登录</button>
+        </header>
+
+        <div class="add-todo">
+            <form id="addTodoForm">
+                <input type="text" id="newTodoTitle" placeholder="输入新的待办事项..." required>
+                <textarea id="newTodoDescription" placeholder="描述（可选）"></textarea>
+                <button type="submit">添加</button>
+            </form>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <!-- 待办事项将通过JavaScript动态添加 -->
+        </div>
+
+        <template id="todoTemplate">
+            <div class="todo-item">
+                <div class="todo-content">
+                    <input type="checkbox" class="todo-checkbox">
+                    <div class="todo-text">
+                        <h3 class="todo-title"></h3>
+                        <p class="todo-description"></p>
+                    </div>
+                </div>
+                <div class="todo-actions">
+                    <button class="edit-btn">编辑</button>
+                    <button class="delete-btn">删除</button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- 编辑待办事项的模态框 -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>编辑待办事项</h2>
+            <form id="editTodoForm">
+                <input type="text" id="editTodoTitle" required>
+                <textarea id="editTodoDescription"></textarea>
+                <div class="modal-buttons">
+                    <button type="submit">保存</button>
+                    <button type="button" id="cancelEdit">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/js/todolist.js"></script>
+</body>
+</html> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 待办事项管理系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-form">
+            <h2>登录</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">登录</button>
+            </form>
+            <p>还没有账号？<a href="#" id="showRegister">注册</a></p>
+        </div>
+
+        <div class="auth-form" id="registerForm" style="display: none;">
+            <h2>注册</h2>
+            <form id="registerFormElement">
+                <div class="form-group">
+                    <label for="regUsername">用户名</label>
+                    <input type="text" id="regUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">密码</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+            <p>已有账号？<a href="#" id="showLogin">登录</a></p>
+        </div>
+    </div>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html> 
